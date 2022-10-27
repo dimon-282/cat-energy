@@ -1,1 +1,64 @@
+.social {
+  background-image: url(../../img/Line.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 20px;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-bottom: 20px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item {
+  margin-right: 35px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item:hover {
+  transform: scale(1.2);
+}
+
+.social__link--vkontakte, .social__link--instagram {
+  fill: @special_grey-3;
+}
+.social__link--facebook {
+  stroke: @special_grey-3;
+}
+
+.social__link--vkontakte:hover, .social__link--instagram:hover {
+  fill: @green;
+}
+
+.social__link--facebook:hover {
+  stroke: @green;
+}
+
+.social__link--vkontakte:active, .social__link--instagram:active  {
+  fill: @green;
+}
+
+.social__link--facebook:active {
+  stroke: @green;
+}
+
+.social__item:active::before {
+  opacity: 0.3;
+}
+
+.social__link::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  }
 
