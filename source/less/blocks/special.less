@@ -1,10 +1,17 @@
+.special {
+  background-color: @white;
+  margin-top: -30px;
+  padding: 10px 30px;
+}
+
 .special__title {
   font-size: 36px;
+  font-weight: 400;
   line-height: 40px;
 }
 
 .special__text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   color: @special_dark-grey;
   line-height: 18px;
 }
@@ -13,28 +20,98 @@
   list-style: none;
   padding-left: 0;
 }
+
 .special__item {
-  background-size: 60px 60px;
   height: 60px;
   padding-left: 80px;
 }
 
 .special__item--useful {
-  background-image: url("../../img/special-1-useful.png");
+  background-image: url("../img/special-1-useful.png");
   background-repeat: no-repeat;
 }
 
 .special__item--powder {
-  background-image: url("../../img/special-2-powder.png");
+  background-image: url("../img/special-2-powder.png");
   background-repeat: no-repeat;
 }
 
 .special__item--nutrition {
-  background-image: url("../../img/special-3-nutrition.png");
+  background-image: url("../img/special-3-nutrition.png");
   background-repeat: no-repeat;
 }
 
 .special__item--time {
-  background-image: url("../../img/special-4-time.png");
+  background-image: url("../img/special-4-time.png");
   background-repeat: no-repeat;
+}
+
+/* @table-width */
+
+@media (min-width: @table-width) {
+  .special__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .special__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .special__item {
+    padding-left: 0;
+    padding-top: 90px;
+    height: 230px;
+    width: 35%;
+  }
+
+  .special__item--useful {
+    background-image: url("../img/special-1-useful-table.png"),
+      url("../img/Special-1.png");
+    background-position: 0% 0%, 70% 0%;
+  }
+
+  .special__item--powder {
+    background-image: url("../img/special-2-powder-table.png"),
+      url("../img/Special-2.png");
+    background-position: 0% 0%, 70% 0%;
+  }
+
+  .special__item--nutrition {
+    background-image: url("../img/special-3-nutrition-table.png"),
+      url("../img/Special-3.png");
+    background-position: 0% 0%, 70% 0%;
+  }
+
+  .special__item--time {
+    background-image: url("../img/special-4-time-table.png"),
+      url("../img/Special-4.png");
+    background-position: 0% 0%, 70% 0%;
+  }
+
+  .special__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* @desktop-width */
+
+@media (min-width: @desktop-width) {
+  .special {
+    padding: 10px 110px;
+  }
+
+  .special__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+
+  .special__item {
+    width: 100%;
+    background-position: 0% 0%, 95% 0%;
+  }
 }

@@ -1,5 +1,5 @@
 .social {
-  background-image: url(../../img/Line.png);
+  background-image: url("../../img/Line.png");
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 20px;
@@ -29,14 +29,17 @@
   transform: scale(1.2);
 }
 
-.social__link--vkontakte, .social__link--instagram {
+.social__link--vkontakte,
+.social__link--instagram {
   fill: @special_grey-3;
 }
+
 .social__link--facebook {
   stroke: @special_grey-3;
 }
 
-.social__link--vkontakte:hover, .social__link--instagram:hover {
+.social__link--vkontakte:hover,
+.social__link--instagram:hover {
   fill: @green;
 }
 
@@ -44,7 +47,8 @@
   stroke: @green;
 }
 
-.social__link--vkontakte:active, .social__link--instagram:active  {
+.social__link--vkontakte:active,
+.social__link--instagram:active {
   fill: @green;
 }
 
@@ -60,5 +64,12 @@
   content: "";
   background-repeat: no-repeat;
   background-position: center;
-  }
+}
 
+/* @table-width */
+
+@media (min-width: @table-width) {
+  .social {
+    background-image: none;
+  }
+}

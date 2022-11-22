@@ -1,0 +1,69 @@
+.form__additionally__item {
+  border: none;
+  position: relative;
+  margin: 15px 0 22px 0;
+}
+
+.additionally__input {
+  display: none;
+}
+
+.lable-additionally {
+  position: relative;
+  display: inline-block;
+
+  padding-left: 45px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @special_grey;
+  }
+
+  &:active {
+    color: @special_grey-hover;
+  }
+}
+
+.lable-additionally:hover::before,
+.lable-additionally:focus::before,
+.lable-additionally:active::before {
+  border: 1px solid @special_grey-hover;
+}
+
+.additionally__input:checked + .lable-additionally::before {
+  background-image: url("../img/checked.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70%;
+}
+
+.width-100 {
+  margin-bottom: 22px;
+}
+
+/* @table-width */
+
+@media (min-width: @table-width) {
+  .additionally-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px 0;
+  }
+}
+
+/* @desktop-width */
+
+@media (min-width: @desktop-width) {
+  .additionally-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
