@@ -13,6 +13,11 @@
   width: 34px;
   height: 38px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/logo-mobile@2x.png");
+    background-size: 34px 38px;
+  }
+
   &:hover {
     opacity: 0.8;
   }
@@ -27,6 +32,11 @@
   background-repeat: no-repeat;
   width: 101px;
   height: 18px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/logo-mobile-2@2x.png");
+    background-size: 101px 18px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -45,7 +55,8 @@
   }
 
   .page-header__logo {
-    background-image: url("../img/logo-tablet.png");
+    background-image: image-set("../img/logo-tablet.png" 1x, "../img/logo-tablet@2x.png" 2x);
+    background-size: 174px 52px;
     background-repeat: no-repeat;
     width: 174px;
     height: 52px;
@@ -69,6 +80,11 @@
     background-repeat: no-repeat;
     width: 202px;
     height: 59px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/logo-desktop@2x.png");
+      background-size: 202px 59px;
+    }
   }
 
   .page-header__logo-2 {

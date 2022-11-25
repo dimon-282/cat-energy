@@ -5,7 +5,7 @@
 }
 
 .promo {
-  background-image: url("../img/index-background-promo.png");
+  background-image: image-set("../img/index/index-background-promo.png" 1x, "../img/index/index-background-promo@2x.png" 2x);
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: 100% 305px;
@@ -29,7 +29,7 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-  padding-top: 27px;
+  margin-top: 28px;
   color: @white;
 }
 
@@ -37,6 +37,7 @@
   text-align: center;
   text-transform: uppercase;
   color: @white;
+  margin-top: -17px;
 }
 
 .button-promo {
@@ -44,9 +45,9 @@
 }
 
 .promo__img {
-  background-image: url("../img/index-can-mobile-1.png");
+  background-image: image-set("../img/index/index-can-mobile-1.png" 1x, "../img/index/index-can-mobile-1@2x.png" 2x);
   background-repeat: no-repeat;
-  background-position-x: center;
+  background-position: center 10px;
   height: 280px;
   width: 100%;
 }
@@ -56,6 +57,7 @@
 @media (min-width: @table-width) {
   .promo-grid {
     height: 890px;
+    margin-bottom: 72px;
   }
 
   .promo {
@@ -68,6 +70,7 @@
 
   .promo__header {
     height: 450px;
+    margin-top: 52px;
   }
 
   .promo__title {
@@ -87,17 +90,18 @@
   }
 
   .promo__img {
-    background-image: url("../img/index-can-tablet-1.png");
+    background-image: image-set("../img/index/index-can-tablet-1.png" 1x, "../img/index/index-can-tablet-1@2x.png" 2x);
     background-repeat: no-repeat;
     height: 609px;
     width: 100%;
     position: absolute;
-    background-position-x: 5%;
+    background-position: 50% 0;
   }
 
   .button-promo {
     padding: 0 117px;
     position: absolute;
+    margin-top: 25px;
   }
 }
 
@@ -108,6 +112,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
+    margin-bottom: 15px;
   }
 
   .promo {
@@ -131,7 +136,7 @@
   }
 
   .promo__img {
-    background-image: url("../img/index-can-desktop-1.png");
+    background-image: image-set("../img/index/index-can-desktop-1.png" 1x, "../img/index/index-can-desktop-1@2x.png" 2x);
     background-repeat: no-repeat;
     background-position-x: 50%;
     position: absolute;

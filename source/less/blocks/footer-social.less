@@ -29,6 +29,16 @@
   transform: scale(1.2);
 }
 
+.social__link--vkontakte {
+  width: 23px;
+  height: 16px;
+}
+
+.social__link--instagram {
+  width: 16px;
+  height: 16px;
+}
+
 .social__link--vkontakte,
 .social__link--instagram {
   fill: @special_grey-3;
@@ -36,6 +46,8 @@
 
 .social__link--facebook {
   stroke: @special_grey-3;
+  width: 22px;
+  height: 22px;
 }
 
 .social__link--vkontakte:hover,
@@ -71,5 +83,20 @@
 @media (min-width: @table-width) {
   .social {
     background-image: none;
+  }
+
+  .social__link--vkontakte {
+    width: 30px;
+    height: 22px;
+  }
+
+  .social__link--instagram {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__link--facebook {
+    width: 28px;
+    height: 33px;
   }
 }

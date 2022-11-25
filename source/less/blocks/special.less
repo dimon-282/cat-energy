@@ -1,13 +1,14 @@
 .special {
   background-color: @white;
-  margin-top: -30px;
-  padding: 10px 30px;
+  margin-top: -5px;
+  padding: 0 20px 20px;
 }
 
 .special__title {
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+  padding-bottom: 7px;
 }
 
 .special__text {
@@ -22,42 +23,57 @@
 }
 
 .special__item {
-  height: 60px;
+  height: 66px;
   padding-left: 80px;
 }
 
 .special__item--useful {
-  background-image: url("../img/special-1-useful.png");
+  background-image: image-set("../img/index/special-1-useful.png" 1x, "../img/index/special-1-useful@2x.png" 2x);
   background-repeat: no-repeat;
 }
 
 .special__item--powder {
-  background-image: url("../img/special-2-powder.png");
+  background-image: image-set("../img/index/special-2-powder.png" 1x, "../img/index/special-2-powder@2x.png" 2x);
   background-repeat: no-repeat;
 }
 
 .special__item--nutrition {
-  background-image: url("../img/special-3-nutrition.png");
+  background-image: image-set("../img/index/special-3-nutrition.png" 1x, "../img/index/special-3-nutrition@2x.png" 2x);
   background-repeat: no-repeat;
 }
 
 .special__item--time {
-  background-image: url("../img/special-4-time.png");
+  background-image: image-set("../img/index/special-4-time.png" 1x, "../img/index/special-4-time@2x.png" 2x);
   background-repeat: no-repeat;
+}
+
+.example__img {
+  background-image: image-set("../img/index/before-mobile-1.png" 1x, "../img/index/before-mobile-1@2x.png" 2x);
+  background-repeat: no-repeat;
+  background-size: 311px 232px;
+  background-position: 50% 0%;
+  height: 232px;
 }
 
 /* @table-width */
 
 @media (min-width: @table-width) {
+  .special {
+    padding: 0 30px;
+  }
+
   .special__title {
     font-size: 60px;
     line-height: 60px;
+    margin-top: 60px;
   }
 
   .special__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 135px;
+    margin-top: 65px;
   }
 
   .special__item {
@@ -68,27 +84,67 @@
   }
 
   .special__item--useful {
-    background-image: url("../img/special-1-useful-table.png"),
-      url("../img/Special-1.png");
-    background-position: 0% 0%, 70% 0%;
+    background-image: image-set("../img/index/special-1-useful-table.png" 1x, "../img/index/special-1-useful-table@2x.png" 2x);
+    background-position: 0% 0%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "1";
+      position: absolute;
+      font-size: 280px;
+      color: @grey;
+      z-index: -1;
+      right: 0;
+    }
   }
 
   .special__item--powder {
-    background-image: url("../img/special-2-powder-table.png"),
-      url("../img/Special-2.png");
-    background-position: 0% 0%, 70% 0%;
+    background-image: image-set("../img/index/special-2-powder-table.png" 1x, "../img/index/special-2-powder-table@2x.png" 2x);
+    background-position: 0% 0%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "2";
+      position: absolute;
+      font-size: 280px;
+      color: @grey;
+      z-index: -1;
+      right: 0;
+    }
   }
 
   .special__item--nutrition {
-    background-image: url("../img/special-3-nutrition-table.png"),
-      url("../img/Special-3.png");
-    background-position: 0% 0%, 70% 0%;
+    background-image: image-set("../img/index/special-3-nutrition-table.png" 1x, "../img/index/special-3-nutrition-table@2x.png" 2x);
+    background-position: 0% 0%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "3";
+      position: absolute;
+      font-size: 280px;
+      color: @grey;
+      z-index: -1;
+      right: 0;
+    }
   }
 
   .special__item--time {
-    background-image: url("../img/special-4-time-table.png"),
-      url("../img/Special-4.png");
-    background-position: 0% 0%, 70% 0%;
+    background-image: image-set("../img/index/special-4-time-table.png" 1x, "../img/index/special-4-time-table@2x.png" 2x);
+    background-position: 0% 0%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "4";
+      position: absolute;
+      font-size: 280px;
+      color: @grey;
+      z-index: -1;
+      right: 0;
+    }
   }
 
   .special__text {
@@ -101,17 +157,20 @@
 
 @media (min-width: @desktop-width) {
   .special {
-    padding: 10px 110px;
+    padding: 0 100px;
   }
 
   .special__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 80px;
+    grid-column-gap: 60px;
   }
 
   .special__item {
     width: 100%;
-    background-position: 0% 0%, 95% 0%;
+  }
+
+  .special__title {
+    margin-top: 30px;
   }
 }

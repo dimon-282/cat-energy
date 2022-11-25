@@ -10,7 +10,7 @@
 
 .form {
   background-color: @white;
-  padding: 0 20px 10px 20px;
+  padding: 0 10px 10px 10px;
 }
 
 .selection__discription {
@@ -48,7 +48,6 @@
 
 .form__section__item {
   border: none;
-  padding-bottom: 24px;
 }
 
 .fields__head {
@@ -91,11 +90,11 @@
 
 @media (min-width: @table-width) {
   .form {
-    padding: 0 70px 30px 70px;
+    padding: 25px 55px 30px 38px;
   }
 
   .form__section__item {
-    padding-bottom: 45px;
+    padding-bottom: 55px;
   }
 
   .selection {
@@ -126,14 +125,14 @@
     font-size: 36px;
     line-height: 36px;
     width: auto;
-    padding: 0 40px;
+    padding: 0 55px;
     margin: 0 -40px;
     z-index: 1;
     display: inline-table;
   }
 
   .fields__head::before {
-    right: -70px;
+    right: -55px;
   }
 
   .fields__head::after {
@@ -147,11 +146,16 @@
     background-color: @green;
   }
 
+  .form__contact__wrapper {
+    margin-top: 60px;
+  }
+
   .form-send {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding-bottom: 15px;
+    margin-left: 30px;
+    padding-bottom: 40px;
   }
 }
 
@@ -159,11 +163,15 @@
 
 @media (min-width: @desktop-width) {
   .selection {
-    padding: 0 110px 5px 110px;
+    padding: 0 110px 20px 110px;
+  }
+
+  .selection .title {
+    padding-top: 75px;
   }
 
   .form {
-    padding: 25px 110px 5px 110px;
+    padding: 25px 110px 5px 90px;
   }
 
   .fields__block {
@@ -175,12 +183,19 @@
     padding: 0;
   }
 
+  .item-name {
+    padding: 0 45px;
+  }
+
   .fields__head {
-    padding-bottom: 70px;
+    padding-bottom: 0;
   }
 
   .form-send {
-    justify-items: center;
-    padding-bottom: 75px;
+    justify-items: left;
+    column-gap: 80px;
+    margin-top: -15px;
+    margin-left: 20px;
+    padding-bottom: 105px;
   }
 }
